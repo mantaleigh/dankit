@@ -1,0 +1,59 @@
+body {
+	font-family:"Comic Sans MS", "Comic Sans", cursive;;
+}
+
+h1, h2, h3, h4, h5{
+	color: white;
+}
+	h1{
+		font-size: 5em;
+		font-family: 
+		font-family: 'Futura', 'Trebuchet MS', Arial, sans-serif;
+	}
+
+.landing{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	background-image: url("../img/rainbow.png");
+	background-size: cover;
+}
+
+.btn {
+	border: none; 
+}
+
+#topbar{
+	align-self: flex-start;
+}
+
+.navbar-inverse{
+	background-color: transparent;
+	border: none;
+}
+	.navbar-inverse .navbar-nav>li>a{
+		color: #fff;
+	}
+	.navbar-inverse .navbar-nav>li>a:hover{
+		color: red;
+	}
+
+.vcenter{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-col{
+	flex-direction: column;
+}
+
+
+#logo {
+	width: 20vh;
+}
+#b_name {
+	width: 70%;
+}

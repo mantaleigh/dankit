@@ -1,0 +1,13 @@
+from django.http import HttpResponse
+import image_processing as proc
+
+
+def home(request):
+    result = proc.find_gif('anger')
+    html = "<html><body>Hello test!<br><img src='"+ result + "'></img></body></html>"
+    return HttpResponse(html)
+
+
+
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DANK IT</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="http://www.samanthavoigt.com/dankit_assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://www.samanthavoigt.com/dankit_assets/css/custome.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- TOP BAR HTML -->
+
+
+    <div class="landing">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <ul class="nav navbar-nav navbar-right text-center">
+                    <li><a href="#">APP</a></li>
+                    <li><a href="http://www.nicememewebsitewebsitewebsitewebsitewebsite.website/">LOLS</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=xfr64zoBTAQ">ABOUT</a></li>
+                </ul>
+            </div>
+        </nav>
+    <div class="container-fluid vcenter flex-col"  style="margin:15vh 0 15vh">
+        <div class="vcenter flex-col" id="block">
+            <div id="logo"><img class="img-responsive" src="http://www.samanthavoigt.com/dankit_assets/img/logo.png"></div><br />
+            <div id="b_name"><img class="img-responsive" src="http://www.samanthavoigt.com/dankit_assets/img/b_name.svg"></div>
+            <h3 class="text-center">If it exists, there IS meme of it.</h3>
+        </div>
+        <div class="form-group">
+            <div class="row vcenter">
+                
+                <form action="/" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                    <div class="col-md-8">
+                        {{ form }}
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <input class="btn btn-default" type="submit" value="Submit">
+                    </div>
+                </form>
+                
+            </div>
+                {% if result_img %} 
+            <br>
+            <div class="row">
+                <div class="vcenter col-md-6 col-lg-12">
+                <img class="img-responsive" style="text-align:center;" src="{{result_img}}">
+             </div>
+             </div>
+                    {% endif %}
+        </div>
+    </div>
+
+
+
+
+
+    <!-- SmoothScroll.js scripts -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            $('label').hide();
+            $('#id_img_url').addClass("form-control");
+            $('#id_img_url').attr('placeholder','url to jpg plz');
+        });
+    </script>
+</body>
+</html>
